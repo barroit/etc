@@ -53,7 +53,9 @@
    "editor.occurrencesHighlight": "off",
    "editor.selectionHighlight": false,
    "editor.matchBrackets": "never",
+   "editor.unicodeHighlight.ambiguousCharacters": false,
    "editor.unicodeHighlight.includeStrings": false,
+   "editor.unicodeHighlight.invisibleCharacters": false,
    "C_Cpp.dimInactiveRegions": false,
 
 /* save */
@@ -384,8 +386,6 @@
 
 /* misc */
    "xml.symbols.maxItemsComputed": -1,
-   "editor.unicodeHighlight.ambiguousCharacters": false,
-   "editor.unicodeHighlight.invisibleCharacters": false,
    "javascript.updateImportsOnFileMove.enabled": "never",
    "yaml.format.singleQuote": true
 }
