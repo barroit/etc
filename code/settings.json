@@ -11,6 +11,7 @@
    "window.restoreWindows": "none",
    "window.zoomLevel": 4,
    "explorer.autoReveal": false,
+   "explorer.sortOrderLexicographicOptions": "upper",
    "problems.visibility": false,
 
 /* editor */
