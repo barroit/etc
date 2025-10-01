@@ -1,0 +1,5 @@
+source ~/.config/gdb/hexdump.py
+
+add-auto-load-safe-path ~/git
+
+set confirm off

@@ -1,0 +1,49 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+source ~/.mutt/current
+
+mailboxes   !
+auto_view   text/html
+mime_lookup application/octet-stream
+
+alternative_order multipart/mixed multipart/related text/plain
+
+set   pager_stop
+unset smart_wrap
+unset markers
+
+set quit = ask-yes
+set sort = reverse-date-received
+
+set editor	 = vim
+set charset	 = UTF-8
+set send_charset = 'us-ascii:utf-8'
+
+set   edit_headers
+set   use_from
+unset use_domain
+
+my_hdr Reply-To: $realname <$from>
+
+bind index <up>   previous-entry
+bind index <down> next-entry
+
+bind pager <up>   previous-line
+bind pager <down> next-line
+
+bind pager <left>  half-up
+bind pager <right> half-down
+
+color normal		white	black
+color index		white	black	'~A'
+color error	bold	white	black
+color tree		white	black
+color indicator	bold	yellow	black
+
+color header	bold	green	black	'(From|To|Cc): '
+color header	bold	white	black	'(Subject|Date): '
+color body		white	black	'.*'
+color markers	bold	magenta	black
+
+color status	bold	cyan	blue
+color prompt  none bold	white	black

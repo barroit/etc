@@ -1,0 +1,42 @@
+[advice]
+	detachedHead = false
+	statusHints  = false
+	mergeConflict = false
+
+[core]
+	autocrlf  = input
+	editor    = vim
+	abbrev    = 12
+	quotepath = false
+
+[fetch]
+	prune = true
+
+[format]
+	useAutoBase
+
+[help]
+	autocorrect = 1
+
+[init]
+	defaultBranch = master
+
+[merge]
+	tool = vimdiff
+
+[mergetool]
+	prompt = false
+
+[pretty]
+	Fixes = Fixes: %h (\"%s\")
+
+[rerere]
+	enabled = true
+
+[tag]
+	forceSignAnnotated = true
+
+[user]
+	name       = Jiamu Sun
+	email      = barroit@linux.com
+	signingkey = EB6F4A6080F544F6

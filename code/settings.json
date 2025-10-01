@@ -1,0 +1,391 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/*
+ * Copyright 2025 Jiamu Sun <barroit@linux.com>
+ */
+
+{
+   "$schema": "vscode://schemas/settings/user",
+
+/* ui */
+   "workbench.activityBar.location": "top",
+   "window.restoreWindows": "none",
+   "window.zoomLevel": 4,
+   "explorer.autoReveal": false,
+   "problems.visibility": false,
+
+/* editor */
+   "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
+   "workbench.editor.enablePreview": false,
+   "workbench.editor.editorActionsLocation": "hidden",
+   "diffEditor.renderSideBySide": false,
+   "merge-conflict.decorators.enabled": false,
+   "editor.stickyScroll.enabled": false,
+   "editor.minimap.enabled": false,
+   "editor.scrollbar.horizontal": "hidden",
+
+
+/* suggestion */
+   "editor.codeLens": false,
+   "editor.guides.indentation": false,
+   "editor.quickSuggestions": {
+      "other": "off"
+   },
+   "xml.validation.enabled": false,
+   "xml.completion.autoCloseTags": false,
+   "html.autoClosingTags": false,
+   "html.autoCreateQuotes": false,
+   "javascript.autoClosingTags": false,
+   "editor.suggestOnTriggerCharacters": false,
+   "explorer.confirmPasteNative": false,
+   "explorer.confirmDragAndDrop": false,
+   "explorer.confirmDelete": false,
+   "extensions.ignoreRecommendations": true,
+   "typescript.validate.enable": false,
+   "javascript.validate.enable": false,
+
+/* scm */
+   "scm.showActionButton": false,
+   "git.showCommitInput": false,
+   "git.openRepositoryInParentFolders": "never",
+   "git.mergeEditor": true,
+
+/* highlight */
+   "editor.occurrencesHighlight": "off",
+   "editor.selectionHighlight": false,
+   "editor.matchBrackets": "never",
+   "editor.unicodeHighlight.includeStrings": false,
+   "C_Cpp.dimInactiveRegions": false,
+
+/* save */
+   "files.autoSave": "onFocusChange",
+   "files.insertFinalNewline": true,
+
+/* indent */
+   "editor.autoIndent": "brackets",
+   "editor.detectIndentation": false,
+   "editor.insertSpaces": false,
+   "editor.tabSize": 8,
+
+/* lang overrides */
+   "[cmake]": {
+      "editor.insertSpaces": true,
+      "editor.indentSize": 2
+   },
+   "[jsonc]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 3
+   },
+   "[json]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 3
+   },
+   "[xml]": {
+      "editor.insertSpaces": true,
+      "editor.indentSize": 2
+   },
+   "[markdown]": {
+      "editor.wordWrap": "off"
+   },
+   "[yaml]": {
+      "editor.tabSize": 3
+   },
+   "[html]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 8,
+      "editor.indentSize": 2
+   },
+   "[restructuredtext-jp]": {
+      "editor.fontFamily": "Noto Sans Mono CJK JP"
+   },
+
+/* file header template */
+   "fileHeaderComment.template": {
+      "*": [
+         "# SPDX-License-Identifier: ${license}"
+      ],
+      "bash": [
+         "#!/bin/bash",
+         "# SPDX-License-Identifier: ${license}"
+      ],
+      "c": [
+         "// SPDX-License-Identifier: ${license}",
+         "/*",
+         " * Copyright ${year} Jiamu Sun <barroit@linux.com>",
+         " */"
+      ],
+      "h": [
+         "/* SPDX-License-Identifier: ${license} */",
+         "/*",
+         " * Copyright ${year} Jiamu Sun <barroit@linux.com>",
+         " */"
+      ],
+      "python": [
+         "#!/usr/bin/python3",
+         "# SPDX-License-Identifier: ${license}"
+      ],
+      "sh": [
+         "#!/bin/sh",
+         "# SPDX-License-Identifier: ${license}"
+      ],
+      "zsh": [
+         "#!/bin/zsh",
+         "# SPDX-License-Identifier: ${license}"
+      ],
+      "rst": [
+         ".. SPDX-License-Identifier: ${license}"
+      ],
+      "html": [
+         "<!-- ============================",
+         "SPDX-License-Identifier: ${license}",
+         "",
+         "Copyright ${year} Jiamu Sun <barroit@linux.com>",
+         "============================= -->"
+      ]
+   },
+
+/* cmake */
+   "cmake.configureOnOpen": false,
+
+/* association */
+   "C_Cpp.autoAddFileAssociations": false,
+   "files.associations": {
+      "*gdbinit": "plaintext",
+      "*lldbinit": "plaintext",
+      "README*": "plaintext",
+      "Kconfig": "plaintext",
+      "TODO": "plaintext",
+      ".git*": "plaintext",
+      ".muttrc": "plaintext",
+      ".config*": "plaintext",
+      "*.h.in": "c",
+      "*.hpp.in": "cpp",
+      "settings.json": "jsonc"
+   },
+
+/* font */
+   "editor.fontFamily": "'JetBrains Mono NL'",
+   "editor.fontSize": 19,
+
+/* colors */
+   "workbench.colorTheme": "Default Dark Modern",
+   "C_Cpp.enhancedColorization": "disabled",
+   "workbench.colorCustomizations": {
+      "editorBracketHighlight.foreground1": "#a8a8a8",
+      "editorBracketHighlight.foreground2": "#a8a8a8",
+      "editorBracketHighlight.foreground3": "#a8a8a8",
+      "editorBracketHighlight.foreground4": "#a8a8a8",
+      "editorBracketHighlight.foreground5": "#a8a8a8",
+      "editorBracketHighlight.foreground6": "#a8a8a8",
+      "editor.foreground": "#a8a8a8",
+      "editor.background": "#141414",
+      "diffEditor.removedLineBackground": "#500000a0",
+      "diffEditor.insertedLineBackground": "#2b3f14fa",
+      "diffEditor.insertedTextBackground": "#00000000"
+   },
+
+/* tokens */
+   "editor.tokenColorCustomizations": {
+      "textMateRules": [
+         {
+            "settings": {
+               "foreground": "#ce9178"
+            },
+            "scope": [
+               "constant.other.placeholder"
+            ]
+         },
+         {
+            "settings": {
+               "foreground": "#c6c699"
+            },
+            "scope": [
+               "entity.name.function",
+               "support.function.builtin"
+            ]
+         },
+         {
+            "settings": {
+               "foreground": "#569cd6"
+            },
+            "scope": [
+               "entity.name.tag.css",
+               "entity.name.tag.js.jsx",
+               "entity.other.attribute-name.class.css",
+               "entity.other.attribute-name.id.css",
+               "entity.other.attribute-name.pseudo-element.css",
+               "keyword.control",
+               "keyword.operator.delete",
+               "keyword.operator.new.cpp",
+               "keyword.other.directive.using.cs",
+               "keyword.other.operator.overload",
+               "keyword.other.using.directive",
+               "storage.modifier",
+               "storage.type.built-in.primitive",
+               "storage.type.primitive.java",
+               "support.class.component.js.jsx",
+               "support.function.cmake",
+               "support.function.be.latex",
+               "support.function.general.tex",
+               "support.function.section.latex",
+               "support.type.built-in.posix-reserved",
+               "support.type.posix-reserved"
+            ]
+         },
+         {
+            "settings": {
+               "foreground": "#a8a8a8"
+            },
+            "scope": [
+               "comment",
+               "constant.character.entity.tsx",
+               "constant.character.escape",
+               "constant.character.set.regexp",
+               "constant.language",
+               "constant.other.character-class.regexp",
+               "constant.other.color.rgb-value.hex.css",
+               "constant.other.php",
+               "constant.other.set.regexp",
+               "entity.name.function",
+               "entity.name.function.preprocessor",
+               "entity.name.label",
+               "entity.name.label.call",
+               "entity.name.namespace",
+               "entity.name.operator.type",
+               "entity.name.other.preprocessor.macro.predefined",
+               "entity.name.scope-resolution",
+               "entity.name.type",
+               "entity.name.variable.field.cs",
+               "entity.name.variable.local.cs",
+               "entity.other.attribute",
+               "entity.other.attribute-name",
+               "entity.other.attribute-name.pseudo-class.css",
+               "interpolated.complex.source.powershell",
+               "keyword.control.anchor.regexp",
+               "keyword.control.directive",
+               "keyword.control.directive",
+               "keyword.operator",
+               "keyword.operator.quantifier.regexp",
+               "meta.parameters.js",
+               "meta.jsx.children.js.jsx",
+               "meta.preprocessor.macro",
+               "meta.property-list.css",
+               "punctuation.accessor.cs",
+               "punctuation.accessor.js",
+               "punctuation.accessor.optional.js.jsx",
+               "punctuation.accessor.tsx",
+               "punctuation.definition.template-expression.begin.js",
+               "punctuation.definition.template-expression.end.js",
+               "punctuation.parenthesis.begin.regexp",
+               "punctuation.parenthesis.end.regexp",
+               "punctuation.section.embedded.begin.js.jsx",
+               "punctuation.section.embedded.end.js.jsx",
+               "punctuation.separator.comma.js",
+               "punctuation.separator.comma.tsx",
+               "punctuation.separator.delimiter.php",
+               "punctuation.separator.key-value.css",
+               "punctuation.separator.key-value.js",
+               "punctuation.separator.key-value.ts",
+               "punctuation.separator.key-value.tsx",
+               "punctuation.terminator.expression.php",
+               "punctuation.terminator.rule.css",
+               "punctuation.terminator.statement.js",
+               "storage.modifier.import.java",
+               "storage.modifier.pointer",
+               "storage.modifier.reference",
+               "storage.source.cmake",
+               "storage.type.annotation.java",
+               "storage.type.function.arrow.js",
+               "storage.type.function.arrow.ts",
+               "storage.type.generic.java",
+               "storage.type.java",
+               "string.regexp",
+               "string.unquoted.cmake",
+               "support.class",
+               "support.constant.property-value.css",
+               "support.function.attribute.powershell",
+               "support.function.builtin",
+               "support.function.calc.css",
+               "support.function.construct.php",
+               "support.function.commandProperty.cmake",
+               "support.function.dir.makefile",
+               "support.function.error.makefile",
+               "support.function.filter.makefile",
+               "support.function.gradient.css",
+               "support.function.js",
+               "support.function.lastword.makefile",
+               "support.function.misc.css",
+               "support.function.patsubst.makefile",
+               "support.function.perl",
+               "support.function.powershell",
+               "support.function.r",
+               "support.function.realpath.makefile",
+               "support.function.shell.makefile",
+               "support.function.target.PHONY.makefile",
+               "support.function.transform.css",
+               "support.function.ts",
+               "support.function.tsx",
+               "support.function.url.css",
+               "support.function.wildcard.makefile",
+               "support.function.wordlist.makefile",
+               "support.type",
+               "support.type.object.module.js",
+               "support.type.primitive.ts",
+               "support.type.property-name.css",
+               "support.type.property-name.json",
+               "support.type.property-name.json.comments",
+               "support.type.python",
+               "support.variable.automatic.powershell",
+               "support.variable.drive.powershell",
+               "support.variable.js",
+               "support.variable.magic.python",
+               "support.variable.property",
+               "support.variable.ts",
+               "support.variable.tsx",
+               "variable",
+               "variable.argument.css",
+               "variable.css",
+               "variable.language.makefile",
+               "variable.legacy.builtin.python",
+               "variable.other.constant",
+               "variable.other.enummember",
+               "variable.other.member.powershell",
+               "variable.parameter.keyframe-list.css",
+               "variable.parameter.misc.css"
+            ]
+         },
+         {
+            "settings": {
+               "foreground": "#acc4a0"
+            },
+            "scope": [
+               "constant.numeric.decimal",
+               "constant.numeric.integer",
+               "storage.type.number.python"
+            ]
+         }
+      ]
+   },
+
+/* trust */
+   "security.workspace.trust.untrustedFiles": "open",
+
+/* workbench */
+   "workbench.navigationControl.enabled": false,
+   "window.commandCenter": false,
+   "window.menuBarVisibility": "hidden",
+   "workbench.layoutControl.enabled": false,
+   "chat.commandCenter.enabled": false,
+   "workbench.startupEditor": "none",
+   "workbench.editor.empty.hint": "hidden",
+   "workbench.editorAssociations": {
+      "*.svg": "default"
+   },
+   "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+/* misc */
+   "xml.symbols.maxItemsComputed": -1,
+   "editor.unicodeHighlight.ambiguousCharacters": false,
+   "editor.unicodeHighlight.invisibleCharacters": false,
+   "javascript.updateImportsOnFileMove.enabled": "never",
+   "yaml.format.singleQuote": true
+}
