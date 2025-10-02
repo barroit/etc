@@ -1,4 +1,4 @@
-" SPDX-License-Identifier: GPL-3.0-or-later
+" SPDX-License-Identifier: LicenseRef-MDM-2.1
 
 hi bashStatement      ctermfg=250
 hi cAnsiFunction      ctermfg=250

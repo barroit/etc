@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: LicenseRef-MDM-2.1
 
 I give you diff output, you give me commit title. You must ensure title style
 is kernel-y. Otherwise I kick your ass.

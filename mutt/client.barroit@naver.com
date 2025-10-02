@@ -1,3 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: LicenseRef-MDM-2.1
 
 secret	barroit@naver.com.secret

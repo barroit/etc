@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: LicenseRef-MDM-2.1
 
 set from = 'barroit@linux.com'
 

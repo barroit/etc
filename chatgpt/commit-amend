@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: LicenseRef-MDM-2.1
 
 You need to help me check commit titles. You must ensure title style is
 kernel-y. If it is, tell me it's fine. Otherwise, amend it and reply in the
