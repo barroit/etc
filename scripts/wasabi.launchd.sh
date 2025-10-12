@@ -3,11 +3,11 @@
 
 scripts=$(dirname $(readlink -f $0))
 
-trap '$scripts/umount-wasabi.sh' SIGTERM
+trap '$scripts/wasabi.sh umount' SIGTERM
 
 export PATH=$PATH:/usr/local/bin
 
-$scripts/mount-wasabi.sh
+$scripts/wasabi.sh
 
 tail -f /dev/null &
 wait $!
