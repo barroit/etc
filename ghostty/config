@@ -4,3 +4,5 @@ background = 141414
 font-family  = JetBrains Mono NL
 font-size    = 28
 font-style   = Bold
+
+shell-integration-features = ssh-env, no-title, no-sudo, no-cursor
