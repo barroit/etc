@@ -1,8 +1,37 @@
-foreground = c8c8c8
-background = 141414
+font-family = JetBrains Mono NL
+font-size = 20
 
-font-family  = JetBrains Mono NL
-font-size    = 28
-font-style   = Bold
+window-height = 52
+window-width = 90
 
-shell-integration-features = ssh-env, no-title, no-sudo, no-cursor
+window-save-state = always
+
+term = xterm-256color
+
+async-backend = io_uring
+
+app-notifications = no-clipboard-copy, no-config-reload
+bell-features = no-title,no-attention
+shell-integration-features = ssh-env,no-title,no-sudo,no-cursor
+
+window-theme = system
+
+foreground = fdffff
+background = 300a24
+
+palette = 0=#171421
+palette = 1=#c01c28
+palette = 2=#26a269
+palette = 3=#a2734c
+palette = 4=#12488b
+palette = 5=#a347ba
+palette = 6=#2aa1b3
+palette = 7=#d0cfcc
+palette = 8=#5e5c64
+palette = 9=#f66151
+palette = 10=#33d17a
+palette = 11=#e9ad0c
+palette = 12=#2a7bde
+palette = 13=#c061cb
+palette = 14=#33c7de
+palette = 15=#ffffff
