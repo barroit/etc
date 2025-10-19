@@ -1,6 +1,6 @@
 [advice]
-	detachedHead = false
-	statusHints  = false
+	detachedHead  = false
+	statusHints   = false
 	mergeConflict = false
 
 [core]
@@ -46,3 +46,9 @@
 	smudge   = git-lfs smudge -- %f
 	process  = git-lfs filter-process
 	required = true
+
+[lfs "transfer.cad39"]
+	remote = wasabi:cad39
+
+[lfs "transfer.blender39"]
+	remote = wasabi:blender39
