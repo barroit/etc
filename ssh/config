@@ -29,14 +29,8 @@ Host github.com
 	IdentityFile ~/.ssh/id_github
 	IdentitiesOnly yes
 
-Host barroit.sh
-	HostName barroit.sh.oci
+Host oci.headnode
+	HostName headnode.oci
 	User ubuntu
-	IdentityFile ~/.ssh/id_barroit_sh
-	IdentitiesOnly yes
-
-Host crap.barroit.sh
-	HostName crap.barroit.sh.oci
-	User ubuntu
-	IdentityFile ~/.ssh/id_crap_barroit_sh
+	IdentityFile ~/.ssh/id_oci_headnode
 	IdentitiesOnly yes
