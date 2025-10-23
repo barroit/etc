@@ -23,14 +23,25 @@ Host dev.ubuntu
 	IdentityFile ~/.ssh/id_dev_ubuntu
 	IdentitiesOnly yes
 
+Host oci.headnode
+	HostName headnode.oci
+	User ubuntu
+	IdentityFile ~/.ssh/id_oci_headnode
+	IdentitiesOnly yes
+
+Host node.raider
+	HostName raider.node
+	IdentityFile ~/.ssh/id_dev_macos
+	IdentitiesOnly yes
+
+Host node.lancer
+	HostName lancer.node
+	IdentityFile ~/.ssh/id_dev_ubuntu
+	IdentitiesOnly yes
+
 Host github.com
 	HostName github.com
 	User git
 	IdentityFile ~/.ssh/id_github
 	IdentitiesOnly yes
 
-Host oci.headnode
-	HostName headnode.oci
-	User ubuntu
-	IdentityFile ~/.ssh/id_oci_headnode
-	IdentitiesOnly yes
