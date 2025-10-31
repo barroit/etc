@@ -47,6 +47,10 @@
 	process  = git-lfs filter-process
 	required = true
 
+[filter "etc"]
+	clean  = ./scripts/etc-patch.awk filter=clean
+	smudge = ./scripts/etc-patch.awk filter=smudge
+
 [lfs "transfer.cad39"]
 	remote = wasabi:cad39
 
