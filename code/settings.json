@@ -9,7 +9,12 @@
 /* ui */
    "workbench.activityBar.location": "top",
    "window.restoreWindows": "none",
-   "window.zoomLevel": 4,
+   // <dev-ubuntu>
+   // "window.zoomLevel": 4,
+   // </dev-ubuntu>
+   // <dev-macos>
+   // "window.zoomLevel": 1,
+   // </dev-macos>
    "explorer.autoReveal": false,
    "explorer.sortOrderLexicographicOptions": "upper",
    "problems.visibility": false,
