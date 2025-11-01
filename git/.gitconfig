@@ -48,8 +48,8 @@
 	required = true
 
 [filter "etc"]
-	clean  = ./scripts/etc-patch.awk filter=clean
-	smudge = ./scripts/etc-patch.awk filter=smudge
+	clean  = ./scripts/patch-etc.awk filter=clean
+	smudge = ./scripts/patch-etc.awk filter=smudge
 
 [lfs "transfer.cad39"]
 	remote = wasabi:cad39
