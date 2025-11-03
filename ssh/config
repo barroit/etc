@@ -2,6 +2,9 @@ Host *
 	AddKeysToAgent yes
 	IdentitiesOnly yes
 
+Host dev.* node.*
+	ForwardAgent yes
+
 Host lvm.windows
 	HostName windows.lvm
 	IdentityFile ~/.ssh/id_lvm_windows
