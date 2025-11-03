@@ -4,7 +4,6 @@
 # Written against python 3.7.3, not tried with earlier python versions.
 #
 #   Copyright (C) 2020 Alexander Perlis
-#   Copyright (C) 2025 Jiamu Sun <barroit@linux.com>
 #
 #   This program is free software; you can redistribute it and/or
 #   modify it under the terms of the GNU General Public License as
@@ -40,43 +39,13 @@ import socket
 import http.server
 import subprocess
 import readline
-import os
-import re
-from os import path
-
-client = {}
-home = os.environ['HOME']
-client_file = path.join(home, '.mutt/client')
-
-if path.exists(client_file):
-	with open(client_file, 'r') as file:
-		for line in file.read().splitlines():
-			if not len(line) or line[0] == '#':
-				continue
-
-			pair = re.split('\t+', line)
-			client[pair[0]] = pair[1]
-
-if 'id' not in client:
-	client['id'] = ''
-
-if 'user' not in client:
-	client['user'] = ''
-
-if 'secret' not in client:
-	client['secret'] = ''
-else:
-	secret_file = path.join(home, '.mutt', client['secret'])
-
-	with open(secret_file, 'r') as file:
-		client['secret'] = file.read().splitlines()[0]
 
 # The token file must be encrypted because it contains multi-use bearer tokens
 # whose usage does not require additional verification. Specify whichever
 # encryption and decryption pipes you prefer. They should read from standard
 # input and write to standard output. The example values here invoke GPG,
 # although won't work until an appropriate identity appears in the first line.
-ENCRYPTION_PIPE = ['gpg', '--encrypt', '--recipient', client['user']]
+ENCRYPTION_PIPE = ['gpg', '--encrypt', '--recipient', 'YOUR_GPG_IDENTITY']
 DECRYPTION_PIPE = ['gpg', '--decrypt']
 
 registrations = {
@@ -90,8 +59,8 @@ registrations = {
         'smtp_endpoint': 'smtp.gmail.com',
         'sasl_method': 'OAUTHBEARER',
         'scope': 'https://mail.google.com/',
-        'client_id': client['id'],
-        'client_secret': client['secret'],
+        'client_id': '',
+        'client_secret': '',
     },
     'microsoft': {
         'authorize_endpoint': 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize',
@@ -106,8 +75,8 @@ registrations = {
         'scope': ('offline_access https://outlook.office.com/IMAP.AccessAsUser.All '
                   'https://outlook.office.com/POP.AccessAsUser.All '
                   'https://outlook.office.com/SMTP.Send'),
-        'client_id': client['id'],
-        'client_secret': client['secret'],
+        'client_id': '',
+        'client_secret': '',
     },
 }
 
@@ -120,16 +89,11 @@ to test the IMAP/POP/SMTP endpoints.
 ''')
 ap.add_argument('-v', '--verbose', action='store_true', help='increase verbosity')
 ap.add_argument('-d', '--debug', action='store_true', help='enable debug output')
-ap.add_argument('tokenfile', nargs='?', help='persistent token storage')
+ap.add_argument('tokenfile', help='persistent token storage')
 ap.add_argument('-a', '--authorize', action='store_true', help='manually authorize new tokens')
 ap.add_argument('--authflow', help='authcode | localhostauthcode | devicecode')
 ap.add_argument('-t', '--test', action='store_true', help='test IMAP/POP/SMTP endpoints')
-ap.add_argument('--show-secret', action='store_true', help='print secret and exit')
 args = ap.parse_args()
-
-if args.show_secret:
-	print(client['secret'])
-	exit(0)
 
 token = {}
 path = Path(args.tokenfile)
