@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-code/settings.json filter=etc
-ghostty/config     filter=etc
+code/settings.json	filter=etc
+ghostty/config		filter=etc
+gnupg/gpg-agent.conf	filter=etc
