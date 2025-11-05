@@ -1,9 +1,6 @@
 Host *
 	IdentitiesOnly yes
 
-Host dev.* node.*
-	ForwardAgent yes
-
 Host lvm.windows
 	HostName windows.lvm
 	IdentityFile %d/.ssh/lvm_windows.pub
