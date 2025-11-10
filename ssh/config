@@ -1,6 +1,11 @@
 Host *
 	IdentitiesOnly yes
 
+Host dev.* node.*
+	SetEnv SSH_AUTH_SOCK=/tmp/S.gpg-agent.ssh
+	RemoteForward /tmp/S.gpg-agent.ssh ${SSH_AUTH_SOCK}
+	RequestTTY yes
+
 Host lvm.windows
 	HostName windows.lvm
 	IdentityFile %d/.ssh/lvm_windows.pub
