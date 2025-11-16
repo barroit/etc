@@ -1,0 +1,15 @@
+[code]
+https://accounts.google.com/o/oauth2/v2/auth
+[/code]
+
+[token]
+https://oauth2.googleapis.com/token
+[/token]
+
+[scope]
+https://mail.google.com/
+[/scope]
+
+[code_access_type]
+offline
+[/code_access_type]
