@@ -1,6 +1,14 @@
 # SPDX-License-Identifier: LicenseRef-MDM-2.1
 
-source ~/.mutt/current
+cd $HOME/.mutt
+
+source user
+
+set from = $imap_user
+
+set send_charset = 'us-ascii:utf-8'
+
+source user-patch
 
 mailboxes   !
 auto_view   text/html
@@ -16,8 +24,6 @@ set quit = ask-yes
 set sort = reverse-date-received
 
 set editor	 = vim
-set charset	 = UTF-8
-set send_charset = 'us-ascii:utf-8'
 
 set   edit_headers
 set   use_from
