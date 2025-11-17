@@ -1,7 +1,0 @@
-# SPDX-License-Identifier: LicenseRef-MDM-2.1
-
-set imap_user = 'j25232sj@edu.tuis.ac.jp'
-set from      = $imap_user
-set realname  = 'ソン カモク'
-
-source ~/.mutt/@outlook.com

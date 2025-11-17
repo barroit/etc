@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: LicenseRef-MDM-2.1
 
-source ~/.mutt/auth.password
+source auth.password
 
 set smtp_url = "smtp://$imap_user@smtp.naver.com:587/"
 

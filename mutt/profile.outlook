@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: LicenseRef-MDM-2.1
 
-source ~/.mutt/auth.oauth2
+source auth.oauth2
 
 set smtp_url = "smtp://$imap_user@smtp-mail.outlook.com:587/"
 
