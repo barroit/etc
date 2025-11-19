@@ -17,9 +17,9 @@ git commit -smTMP
 trap 'git reset HEAD^' EXIT
 
 if [ $(uname -o) = GNU/Linux ]; then
-	host=dev.macos
+	host=node.raider
 else
-	host=dev.ubuntu
+	host=node.lancer
 fi
 
 upstream=$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
