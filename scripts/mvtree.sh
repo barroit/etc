@@ -30,19 +30,20 @@ remote_url=$(git remote get-url $remote)
 git format-patch HEAD~1 --stdout | ssh $host "
 set -e
 
+trap 'git remote | grep -xqF mvtree && git remote remove mvtree' EXIT
+
 cd \$HOME/${PWD#$HOME/}
 export PATH=\$HOME/.local/bin:\$PATH
 
-git remote add move-wip $remote_url
+git remote add mvtree $remote_url
 
-git fetch move-wip $branch
+git fetch mvtree $branch
 git switch -C $branch
-git reset --hard move-wip/$branch
+git reset --hard mvtree/$branch
 
 git am -
 
 git reset HEAD^
-git remote remove move-wip
 "
 
 trap 'git reset --hard HEAD^' EXIT
