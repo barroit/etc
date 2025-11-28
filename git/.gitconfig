@@ -56,3 +56,6 @@
 
 [lfs "transfer.blender39"]
 	remote = wasabi:blender39
+
+[lfs "transfer.image39"]
+	remote = wasabi:image39
