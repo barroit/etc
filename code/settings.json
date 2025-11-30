@@ -29,7 +29,6 @@
    "editor.minimap.enabled": false,
    "editor.scrollbar.horizontal": "hidden",
 
-
 /* suggestion */
    "editor.codeLens": false,
    "editor.guides.indentation": false,
@@ -104,6 +103,10 @@
    },
    "[restructuredtext-jp]": {
       "editor.fontFamily": "Noto Sans Mono CJK JP"
+   },
+   "[latex]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 3
    },
 
 /* file header template */
