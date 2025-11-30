@@ -197,6 +197,18 @@
 /* tokens */
    "editor.tokenColorCustomizations": {
       "textMateRules": [
+         /* styles */
+         {
+            "settings": {
+               "fontStyle": ""
+            },
+            "scope": [
+               "entity.name.section.markdown",
+               "markup.bold.textbf.latex",
+               "markup.heading"
+            ]
+         },
+         /* colors */
          {
             "settings": {
                "foreground": "#ce9178"
