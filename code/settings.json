@@ -108,6 +108,11 @@
       "editor.insertSpaces": true,
       "editor.tabSize": 3
    },
+   "[latex-jp]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 3,
+      "editor.fontFamily": "Noto Sans Mono CJK JP"
+   },
 
 /* file header template */
    "fileHeaderComment.template": {
@@ -231,6 +236,7 @@
                "foreground": "#569cd6"
             },
             "scope": [
+               "constant.other.general.math.tex",
                "entity.name.tag.css",
                "entity.name.tag.js.jsx",
                "entity.other.attribute-name.class.css",
