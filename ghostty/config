@@ -3,7 +3,7 @@ font-family = JetBrains Mono NL
 # font-size = 20
 # </dev-ubuntu>
 # <dev-macos>
-# font-size = 28
+# font-size = 34
 # </dev-macos>
 
 window-height = 52

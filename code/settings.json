@@ -13,7 +13,7 @@
    // "window.zoomLevel": 4,
    // </dev-ubuntu>
    // <dev-macos>
-   // "window.zoomLevel": 1,
+   // "window.zoomLevel": 2,
    // </dev-macos>
    "explorer.autoReveal": false,
    "explorer.sortOrderLexicographicOptions": "upper",
