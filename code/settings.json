@@ -102,7 +102,7 @@
       "editor.indentSize": 2
    },
    "[restructuredtext-jp]": {
-      "editor.fontFamily": "Noto Sans Mono CJK JP"
+      "editor.fontFamily": "SOROEMONO"
    },
    "[latex]": {
       "editor.insertSpaces": true,
@@ -111,7 +111,7 @@
    "[latex-jp]": {
       "editor.insertSpaces": true,
       "editor.tabSize": 3,
-      "editor.fontFamily": "Noto Sans Mono CJK JP"
+      "editor.fontFamily": "SOROEMONO"
    },
 
 /* file header template */
