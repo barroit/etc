@@ -6,47 +6,72 @@
 {
    "$schema": "vscode://schemas/settings/user",
 
-/* ui */
-   "workbench.activityBar.location": "top",
+/* window */
    "window.restoreWindows": "none",
+   "window.menuBarVisibility": "hidden",
+   "window.commandCenter": false,
+   "chat.commandCenter.enabled": false,
    // <dev-ubuntu>
    // "window.zoomLevel": 4,
    // </dev-ubuntu>
    // <dev-macos>
    // "window.zoomLevel": 1,
    // </dev-macos>
+
+/* workbench */
+   "workbench.activityBar.location": "top",
+   "workbench.navigationControl.enabled": false,
+   "workbench.layoutControl.enabled": false,
+   "workbench.secondarySideBar.defaultVisibility": "hidden",
+   "workbench.startupEditor": "none",
+   "workbench.editor.empty.hint": "hidden",
+   "workbench.editorAssociations": {
+      "*.svg": "default"
+   },
+   "problems.visibility": false,
+
+/* explorer */
    "explorer.autoReveal": false,
    "explorer.sortOrderLexicographicOptions": "upper",
-   "problems.visibility": false,
+   "explorer.confirmPasteNative": false,
+   "explorer.confirmDragAndDrop": false,
+   "explorer.confirmDelete": false,
 
 /* editor */
    "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
    "workbench.editor.enablePreview": false,
    "workbench.editor.editorActionsLocation": "hidden",
-   "diffEditor.renderSideBySide": false,
-   "merge-conflict.decorators.enabled": false,
    "editor.stickyScroll.enabled": false,
    "editor.minimap.enabled": false,
    "editor.scrollbar.horizontal": "hidden",
-
-/* suggestion */
-   "editor.codeLens": false,
    "editor.guides.indentation": false,
+   "diffEditor.renderSideBySide": false,
+   "merge-conflict.decorators.enabled": false,
+
+/* trust */
+   "security.workspace.trust.untrustedFiles": "open",
+
+/* intelligence */
+   "editor.codeLens": false,
    "editor.quickSuggestions": {
       "other": "off"
    },
-   "xml.validation.enabled": false,
+   "editor.suggestOnTriggerCharacters": false,
+   "editor.inlineSuggest.enabled": false,
+
+/* typing automation */
    "xml.completion.autoCloseTags": false,
    "html.autoClosingTags": false,
    "html.autoCreateQuotes": false,
    "javascript.autoClosingTags": false,
-   "editor.suggestOnTriggerCharacters": false,
-   "explorer.confirmPasteNative": false,
-   "explorer.confirmDragAndDrop": false,
-   "explorer.confirmDelete": false,
-   "extensions.ignoreRecommendations": true,
+
+/* code validation */
+   "xml.validation.enabled": false,
    "typescript.validate.enable": false,
    "javascript.validate.enable": false,
+
+/* extensions */
+   "extensions.ignoreRecommendations": true,
 
 /* scm */
    "scm.showActionButton": false,
@@ -54,16 +79,7 @@
    "git.openRepositoryInParentFolders": "never",
    "git.mergeEditor": true,
 
-/* highlight */
-   "editor.occurrencesHighlight": "off",
-   "editor.selectionHighlight": false,
-   "editor.matchBrackets": "never",
-   "editor.unicodeHighlight.ambiguousCharacters": false,
-   "editor.unicodeHighlight.includeStrings": false,
-   "editor.unicodeHighlight.invisibleCharacters": false,
-   "C_Cpp.dimInactiveRegions": false,
-
-/* save */
+/* file saving */
    "files.autoSave": "onFocusChange",
    "files.insertFinalNewline": true,
 
@@ -73,7 +89,42 @@
    "editor.insertSpaces": false,
    "editor.tabSize": 8,
 
-/* lang overrides */
+/* file association */
+   "C_Cpp.autoAddFileAssociations": false,
+   "files.associations": {
+      "*gdbinit": "plaintext",
+      "*lldbinit": "plaintext",
+      "README*": "plaintext",
+      "Kconfig": "plaintext",
+      "TODO": "plaintext",
+      ".git*": "plaintext",
+      ".muttrc": "plaintext",
+      ".config*": "plaintext",
+      "*.h.in": "c",
+      "*.hpp.in": "cpp",
+      "settings.json": "jsonc"
+   },
+
+/* typography */
+   "editor.fontFamily": "'JetBrains Mono NL'",
+   "editor.fontSize": 19,
+
+/* highlighting */
+   "editor.occurrencesHighlight": "off",
+   "editor.selectionHighlight": false,
+   "editor.matchBrackets": "never",
+   "editor.unicodeHighlight.ambiguousCharacters": false,
+   "editor.unicodeHighlight.includeStrings": false,
+   "editor.unicodeHighlight.invisibleCharacters": false,
+   "C_Cpp.dimInactiveRegions": false,
+
+/* language specific */
+   "cmake.configureOnOpen": false,
+   "xml.symbols.maxItemsComputed": -1,
+   "javascript.updateImportsOnFileMove.enabled": "never",
+   "yaml.format.singleQuote": true,
+
+/* language override */
    "[cmake]": {
       "editor.insertSpaces": true,
       "editor.indentSize": 2
@@ -101,7 +152,7 @@
       "editor.tabSize": 8,
       "editor.indentSize": 2
    },
-   "[restructuredtext-jp]": {
+   "[rst-jp]": {
       "editor.fontFamily": "SOROEMONO"
    },
    "[latex]": {
@@ -113,76 +164,12 @@
       "editor.tabSize": 3,
       "editor.fontFamily": "SOROEMONO"
    },
-
-/* file header template */
-   "fileHeaderComment.template": {
-      "*": [
-         "# SPDX-License-Identifier: ${license}"
-      ],
-      "bash": [
-         "#!/bin/bash",
-         "# SPDX-License-Identifier: ${license}"
-      ],
-      "c": [
-         "// SPDX-License-Identifier: ${license}",
-         "/*",
-         " * Copyright ${year} Jiamu Sun <barroit@linux.com>",
-         " */"
-      ],
-      "h": [
-         "/* SPDX-License-Identifier: ${license} */",
-         "/*",
-         " * Copyright ${year} Jiamu Sun <barroit@linux.com>",
-         " */"
-      ],
-      "python": [
-         "#!/usr/bin/python3",
-         "# SPDX-License-Identifier: ${license}"
-      ],
-      "sh": [
-         "#!/bin/sh",
-         "# SPDX-License-Identifier: ${license}"
-      ],
-      "zsh": [
-         "#!/bin/zsh",
-         "# SPDX-License-Identifier: ${license}"
-      ],
-      "rst": [
-         ".. SPDX-License-Identifier: ${license}"
-      ],
-      "html": [
-         "<!-- ============================",
-         "SPDX-License-Identifier: ${license}",
-         "",
-         "Copyright ${year} Jiamu Sun <barroit@linux.com>",
-         "============================= -->"
-      ]
+   "[ruby]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 3
    },
 
-/* cmake */
-   "cmake.configureOnOpen": false,
-
-/* association */
-   "C_Cpp.autoAddFileAssociations": false,
-   "files.associations": {
-      "*gdbinit": "plaintext",
-      "*lldbinit": "plaintext",
-      "README*": "plaintext",
-      "Kconfig": "plaintext",
-      "TODO": "plaintext",
-      ".git*": "plaintext",
-      ".muttrc": "plaintext",
-      ".config*": "plaintext",
-      "*.h.in": "c",
-      "*.hpp.in": "cpp",
-      "settings.json": "jsonc"
-   },
-
-/* font */
-   "editor.fontFamily": "'JetBrains Mono NL'",
-   "editor.fontSize": 19,
-
-/* colors */
+/* theme */
    "workbench.colorTheme": "Default Dark Modern",
    "C_Cpp.enhancedColorization": "disabled",
    "workbench.colorCustomizations": {
@@ -198,11 +185,9 @@
       "diffEditor.insertedLineBackground": "#2b3f14fa",
       "diffEditor.insertedTextBackground": "#00000000"
    },
-
-/* tokens */
    "editor.tokenColorCustomizations": {
       "textMateRules": [
-         /* styles */
+      /* styles */
          {
             "settings": {
                "fontStyle": ""
@@ -213,7 +198,7 @@
                "markup.heading"
             ]
          },
-         /* colors */
+      /* colors */
          {
             "settings": {
                "foreground": "#ce9178"
@@ -252,8 +237,8 @@
                "storage.type.built-in.primitive",
                "storage.type.primitive.java",
                "support.class.component.js.jsx",
-               "support.function.cmake",
                "support.function.be.latex",
+               "support.function.cmake",
                "support.function.general.tex",
                "support.function.section.latex",
                "support.function.textbf.latex",
@@ -272,6 +257,7 @@
                "constant.character.set.regexp",
                "constant.language",
                "constant.other.character-class.regexp",
+               "constant.other.character-class.set.regexp",
                "constant.other.color.rgb-value.hex.css",
                "constant.other.php",
                "constant.other.set.regexp",
@@ -292,8 +278,8 @@
                "interpolated.complex.source.powershell",
                "keyword.control.anchor.regexp",
                "keyword.control.directive",
-               "keyword.control.directive",
                "keyword.operator",
+               "keyword.operator.negation.regexp",
                "keyword.operator.quantifier.regexp",
                "markup.bold.textbf.latex",
                "meta.parameters.js",
@@ -304,11 +290,13 @@
                "punctuation.accessor.js",
                "punctuation.accessor.optional.js.jsx",
                "punctuation.accessor.tsx",
+               "punctuation.definition.character-class.regexp",
                "punctuation.definition.template-expression.begin.js",
                "punctuation.definition.template-expression.end.js",
                "punctuation.parenthesis.begin.regexp",
                "punctuation.parenthesis.end.regexp",
                "punctuation.section.embedded.begin.js.jsx",
+               "punctuation.section.embedded.begin.ruby",
                "punctuation.section.embedded.end.js.jsx",
                "punctuation.separator.comma.js",
                "punctuation.separator.comma.tsx",
@@ -320,6 +308,7 @@
                "punctuation.terminator.expression.php",
                "punctuation.terminator.rule.css",
                "punctuation.terminator.statement.js",
+               "source.ruby",
                "storage.modifier.import.java",
                "storage.modifier.pointer",
                "storage.modifier.reference",
@@ -337,14 +326,15 @@
                "support.function.attribute.powershell",
                "support.function.builtin",
                "support.function.calc.css",
-               "support.function.construct.php",
                "support.function.commandProperty.cmake",
+               "support.function.construct.php",
                "support.function.dir.makefile",
                "support.function.error.makefile",
                "support.function.filter.makefile",
                "support.function.general.latex",
                "support.function.gradient.css",
                "support.function.js",
+               "support.function.kernel.ruby",
                "support.function.lastword.makefile",
                "support.function.misc.css",
                "support.function.patsubst.makefile",
@@ -398,26 +388,5 @@
             ]
          }
       ]
-   },
-
-/* trust */
-   "security.workspace.trust.untrustedFiles": "open",
-
-/* workbench */
-   "workbench.navigationControl.enabled": false,
-   "window.commandCenter": false,
-   "window.menuBarVisibility": "hidden",
-   "workbench.layoutControl.enabled": false,
-   "chat.commandCenter.enabled": false,
-   "workbench.startupEditor": "none",
-   "workbench.editor.empty.hint": "hidden",
-   "workbench.editorAssociations": {
-      "*.svg": "default"
-   },
-   "workbench.secondarySideBar.defaultVisibility": "hidden",
-
-/* misc */
-   "xml.symbols.maxItemsComputed": -1,
-   "javascript.updateImportsOnFileMove.enabled": "never",
-   "yaml.format.singleQuote": true
+   }
 }
