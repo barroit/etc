@@ -36,6 +36,12 @@
    "explorer.confirmPasteNative": false,
    "explorer.confirmDragAndDrop": false,
    "explorer.confirmDelete": false,
+   "search.exclude": {
+      "**/node_modules": true,
+      "**/LICENSES": true,
+      "**/pnpm-lock.yaml": true,
+      "**/.github": true
+   },
 
 /* editor */
    "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
