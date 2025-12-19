@@ -39,7 +39,7 @@
 [user]
 	name       = Jiamu Sun
 	email      = barroit@linux.com
-	signingkey = EB6F4A6080F544F6
+	signingkey = 629BB496006DBDA8
 
 [filter "lfs"]
 	clean    = git-lfs clean -- %f
