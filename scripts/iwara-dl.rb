@@ -17,9 +17,10 @@ param_map = params.to_h
 now = Time.now
 time = now.strftime('%y-%m-%d ')
 
-name_raw = param_map['download']
-name_san = name_raw.sub(/( \[[^\]]+\])+(?=.mp4$)/, '')
-name = time + name_san
+name = param_map['download']
+name = name.sub(/( \[[^\]]+\])+(?=.mp4$)/, '')
+name = name.gsub('/', '／')
+name = time + name
 
 system('aria2c', '--split=16',
        '--max-connection-per-server=16', "--out=#{name}", url_str)
