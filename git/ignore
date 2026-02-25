@@ -4,6 +4,7 @@
 /.lldbinit
 
 /.tmp*
+/.dev.vars
 
 /core.*
 /vgcore.*
