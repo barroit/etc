@@ -10,7 +10,6 @@
    "window.restoreWindows": "none",
    "window.menuBarVisibility": "hidden",
    "window.commandCenter": false,
-   "chat.commandCenter.enabled": false,
    // <dev-ubuntu>
    // "window.zoomLevel": 4,
    // </dev-ubuntu>
@@ -108,7 +107,8 @@
       ".config*": "plaintext",
       "*.h.in": "c",
       "*.hpp.in": "cpp",
-      "settings.json": "jsonc"
+      "settings.json": "jsonc",
+      "_headers": "plaintext"
    },
 
 /* typography */
@@ -291,6 +291,7 @@
                "keyword.other.js",
                "markup.bold.textbf.latex",
                "meta.jsx.children.js.jsx",
+               "meta.object-literal.key.js.jsx",
                "meta.parameters.js",
                "meta.preprocessor.macro",
                "meta.property-list.css",
@@ -342,10 +343,14 @@
                "support.function.construct.php",
                "support.function.dir.makefile",
                "support.function.error.makefile",
+               "support.function.eval.makefile",
                "support.function.filter.makefile",
+               "support.function.filter-out.makefile",
                "support.function.firstword.makefile",
+               "support.function.foreach.makefile",
                "support.function.general.latex",
                "support.function.gradient.css",
+               "support.function.join.makefile",
                "support.function.js",
                "support.function.kernel.ruby",
                "support.function.lastword.makefile",
@@ -359,6 +364,7 @@
                "support.function.shell.makefile",
                "support.function.sort.makefile",
                "support.function.subst.makefile",
+               "support.function.suffix.makefile",
                "support.function.target.PHONY.makefile",
                "support.function.transform.css",
                "support.function.ts",
@@ -391,6 +397,7 @@
                "variable.other.member.powershell",
                "variable.parameter.keyframe-list.css",
                "variable.parameter.misc.css"
+               "variable.parameter.url.css",
             ]
          },
          {
