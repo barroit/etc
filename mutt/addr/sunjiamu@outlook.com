@@ -3,4 +3,4 @@
 set imap_user = sunjiamu@outlook.com
 set realname = 'Jiamu Sun'
 
-source profile.outlook
+source $HOME/.mutt/profile.outlook

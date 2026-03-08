@@ -3,4 +3,4 @@
 set imap_user = j25232sj@edu.tuis.ac.jp
 set realname = 'ソン カモク'
 
-source profile.outlook
+source $HOME/.mutt/profile.outlook

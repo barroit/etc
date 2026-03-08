@@ -3,4 +3,4 @@
 set imap_user = barroit@naver.com
 set realname = 'Jiamu Sun'
 
-source profile.naver
+source $HOME/.mutt/profile.naver

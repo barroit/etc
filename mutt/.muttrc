@@ -1,15 +1,13 @@
 # SPDX-License-Identifier: LicenseRef-MDM-2.1
 
-cd $HOME/.mutt
-
-source user
+source $HOME/.mutt/user
 
 set from = $imap_user
 
 set send_charset = 'us-ascii:utf-8'
 set signature = 'mutt-signature.sh|'
 
-source user-patch
+source $HOME/.mutt/user-patch
 
 mailboxes   !
 auto_view   text/html

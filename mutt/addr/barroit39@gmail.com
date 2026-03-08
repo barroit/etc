@@ -3,4 +3,4 @@
 set imap_user = barroit39@gmail.com
 set realname = 'Jiamu Sun'
 
-source profile.gmail
+source $HOME/.mutt/profile.gmail
