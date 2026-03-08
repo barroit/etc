@@ -11,7 +11,7 @@
    "window.menuBarVisibility": "hidden",
    "window.commandCenter": false,
    // <dev-ubuntu>
-   // "window.zoomLevel": 4,
+   // // "window.zoomLevel": 4,
    // </dev-ubuntu>
    // <dev-macos>
    // "window.zoomLevel": 1,
@@ -77,6 +77,12 @@
 
 /* extensions */
    "extensions.ignoreRecommendations": true,
+
+/* discord */
+   "discord.detailsIdling": "{empty}",
+   "discord.lowerDetailsIdling": "{empty}",
+   "discord.detailsEditing": "editing {file_name}:{current_line}",
+   "discord.lowerDetailsEditing": "on {git_repo_name}.{git_branch}",
 
 /* scm */
    "scm.showActionButton": false,
