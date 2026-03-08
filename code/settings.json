@@ -11,7 +11,7 @@
    "window.menuBarVisibility": "hidden",
    "window.commandCenter": false,
    // <dev-ubuntu>
-   // // "window.zoomLevel": 4,
+   // "window.zoomLevel": 4,
    // </dev-ubuntu>
    // <dev-macos>
    // "window.zoomLevel": 1,
@@ -181,6 +181,10 @@
       "editor.tabSize": 3
    },
 
+   "spdxheader.spdx": {
+      "jsx": "/* {} */"
+   },
+
 /* theme */
    "workbench.colorTheme": "Default Dark Modern",
    "C_Cpp.enhancedColorization": "disabled",
@@ -282,8 +286,14 @@
                "entity.name.other.preprocessor.macro.predefined",
                "entity.name.scope-resolution",
                "entity.name.type",
+               "entity.name.variable.event.cs",
                "entity.name.variable.field.cs",
                "entity.name.variable.local.cs",
+               "entity.name.variable.parameter.cs",
+               "entity.name.variable.preprocessor.symbol.cs",
+               "entity.name.variable.property.cs",
+               "entity.name.variable.range-variable.cs",
+               "entity.name.variable.tuple-element.cs",
                "entity.other.attribute",
                "entity.other.attribute-name",
                "entity.other.attribute-name.pseudo-class.css",
@@ -384,6 +394,7 @@
                "support.type.property-name.css",
                "support.type.property-name.json",
                "support.type.property-name.json.comments",
+               "support.type.property-name.media.css",
                "support.type.python",
                "support.variable.automatic.powershell",
                "support.variable.drive.powershell",
