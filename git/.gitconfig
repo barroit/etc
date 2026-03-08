@@ -16,7 +16,7 @@
 	useAutoBase
 
 [help]
-	autocorrect = 1
+	autocorrect = immediate
 
 [init]
 	defaultBranch = master
@@ -38,7 +38,7 @@
 
 [user]
 	name       = Jiamu Sun
-	email      = barroit@linux.com
+	email      = 39@barroit.sh
 	signingkey = 629BB496006DBDA8
 
 [filter "lfs"]
