@@ -59,3 +59,11 @@
 
 [lfs "transfer.image39"]
 	remote = wasabi:image39
+
+[sendemail]
+	smtpserver     = smtp.office365.com
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = sunjiamu@outlook.com
+	smtpauth = XOAUTH2
+	from = Jiamu Sun <39@barroit.sh>
