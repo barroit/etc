@@ -42,7 +42,7 @@
 	signingkey = 629BB496006DBDA8
 
 [diff "sqlite3"]
-	textconv = diff-db.sh
+	textconv = dump-db.sh
 
 [filter "lfs"]
 	clean    = git-lfs clean -- %f
