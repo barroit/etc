@@ -41,6 +41,9 @@
 	email      = 39@barroit.sh
 	signingkey = 629BB496006DBDA8
 
+[diff "sqlite3"]
+	textconv = diff-db.sh
+
 [filter "lfs"]
 	clean    = git-lfs clean -- %f
 	smudge   = git-lfs smudge -- %f
