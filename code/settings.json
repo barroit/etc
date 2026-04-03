@@ -78,12 +78,6 @@
 /* extensions */
    "extensions.ignoreRecommendations": true,
 
-/* discord */
-   "discord.detailsIdling": "{empty}",
-   "discord.lowerDetailsIdling": "{empty}",
-   "discord.detailsEditing": "editing {file_name}:{current_line}",
-   "discord.lowerDetailsEditing": "on {git_repo_name}.{git_branch}",
-
 /* scm */
    "scm.showActionButton": false,
    "git.showCommitInput": false,
@@ -164,14 +158,14 @@
       "editor.tabSize": 8,
       "editor.indentSize": 2
    },
-   "[rst-jp]": {
+   "[rst-ja]": {
       "editor.fontFamily": "SOROEMONO"
    },
    "[latex]": {
       "editor.insertSpaces": true,
       "editor.tabSize": 3
    },
-   "[latex-jp]": {
+   "[latex-ja]": {
       "editor.insertSpaces": true,
       "editor.tabSize": 3,
       "editor.fontFamily": "SOROEMONO"
@@ -286,6 +280,7 @@
                "entity.name.other.preprocessor.macro.predefined",
                "entity.name.scope-resolution",
                "entity.name.type",
+               "entity.name.variable.enum-member.cs",
                "entity.name.variable.event.cs",
                "entity.name.variable.field.cs",
                "entity.name.variable.local.cs",
@@ -297,7 +292,9 @@
                "entity.other.attribute",
                "entity.other.attribute-name",
                "entity.other.attribute-name.pseudo-class.css",
+               "entity.other.inherited-class.python",
                "interpolated.complex.source.powershell",
+               "keyword.codetag.notation.python",
                "keyword.control.anchor.regexp",
                "keyword.control.directive",
                "keyword.operator",
@@ -328,6 +325,7 @@
                "punctuation.separator.comma.tsx",
                "punctuation.separator.delimiter.php",
                "punctuation.separator.key-value.css",
+               "punctuation.separator.key-value.html",
                "punctuation.separator.key-value.js",
                "punctuation.separator.key-value.ts",
                "punctuation.separator.key-value.tsx",
@@ -370,6 +368,7 @@
                "support.function.js",
                "support.function.kernel.ruby",
                "support.function.lastword.makefile",
+               "support.function.magic.python",
                "support.function.misc.css",
                "support.function.notdir.makefile",
                "support.function.patsubst.makefile",
@@ -408,6 +407,7 @@
                "variable.css",
                "variable.language.makefile",
                "variable.language.special.cls.python",
+               "variable.language.special.self.python",
                "variable.legacy.builtin.python",
                "variable.other.constant",
                "variable.other.enummember",
