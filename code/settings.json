@@ -68,12 +68,11 @@
    "xml.completion.autoCloseTags": false,
    "html.autoClosingTags": false,
    "html.autoCreateQuotes": false,
-   "javascript.autoClosingTags": false,
+   "js/ts.autoClosingTags.enabled": false,
 
 /* code validation */
    "xml.validation.enabled": false,
-   "typescript.validate.enable": false,
-   "javascript.validate.enable": false,
+   "js/ts.validate.enabled": false,
 
 /* extensions */
    "extensions.ignoreRecommendations": true,
@@ -127,7 +126,7 @@
 /* language specific */
    "cmake.configureOnOpen": false,
    "xml.symbols.maxItemsComputed": -1,
-   "javascript.updateImportsOnFileMove.enabled": "never",
+   "js/ts.updateImportsOnFileMove.enabled": "never",
    "yaml.format.singleQuote": true,
 
 /* language override */
@@ -175,12 +174,8 @@
       "editor.tabSize": 3
    },
 
-   "spdxheader.spdx": {
-      "jsx": "/* {} */"
-   },
-
 /* theme */
-   "workbench.colorTheme": "Default Dark Modern",
+   "workbench.colorTheme": "Dark Modern",
    "C_Cpp.enhancedColorization": "disabled",
    "workbench.colorCustomizations": {
       "editorBracketHighlight.foreground1": "#a8a8a8",
@@ -348,6 +343,7 @@
                "support.constant.property-value.css",
                "support.function.addprefix.makefile",
                "support.function.addsuffix.makefile",
+               "support.function.and.makefile",
                "support.function.attribute.powershell",
                "support.function.basename.makefile",
                "support.function.builtin",
@@ -371,6 +367,7 @@
                "support.function.magic.python",
                "support.function.misc.css",
                "support.function.notdir.makefile",
+               "support.function.or.makefile",
                "support.function.patsubst.makefile",
                "support.function.perl",
                "support.function.powershell",
@@ -413,7 +410,7 @@
                "variable.other.enummember",
                "variable.other.member.powershell",
                "variable.parameter.keyframe-list.css",
-               "variable.parameter.misc.css"
+               "variable.parameter.misc.css",
                "variable.parameter.url.css",
             ]
          },
