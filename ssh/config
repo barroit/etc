@@ -8,15 +8,15 @@ Host dev.* node.*
 
 Host lvm.windows
 	HostName windows.lvm
-	IdentityFile %d/.ssh/lvm_windows.pub
+	IdentityFile %d/.ssh/lvm_windows
 
 Host lvm.noble
 	HostName noble.lvm
-	IdentityFile %d/.ssh/lvm_noble.pub
+	IdentityFile %d/.ssh/lvm_noble
 
 Host lvm.freebsd
 	HostName freebsd.lvm
-	IdentityFile %d/.ssh/lvm_freebsd.pub
+	IdentityFile %d/.ssh/lvm_freebsd
 
 Host dev.macos
 	HostName macos.dev
