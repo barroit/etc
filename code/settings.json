@@ -188,7 +188,8 @@
       "editor.background": "#141414",
       "diffEditor.removedLineBackground": "#500000a0",
       "diffEditor.insertedLineBackground": "#2b3f14fa",
-      "diffEditor.insertedTextBackground": "#00000000"
+      "diffEditor.insertedTextBackground": "#00000000",
+      "editorHint.foreground": "#00000000",
    },
    "editor.tokenColorCustomizations": {
       "textMateRules": [
@@ -378,6 +379,7 @@
                "support.function.subst.makefile",
                "support.function.suffix.makefile",
                "support.function.target.PHONY.makefile",
+               "support.function.target.SECONDARY.makefile",
                "support.function.transform.css",
                "support.function.ts",
                "support.function.tsx",
