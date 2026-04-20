@@ -45,5 +45,9 @@
    {
       "key": "cmd+b",
       "command": "-workbench.action.toggleSidebarVisibility"
+   },
+   {
+      "key": "ctrl+\\",
+      "command": "-workbench.action.splitEditor"
    }
 ]

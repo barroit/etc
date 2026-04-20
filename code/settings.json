@@ -248,6 +248,7 @@
                "support.function.general.tex",
                "support.function.section.latex",
                "support.function.textbf.latex",
+               "support.function.textit.latex",
                "support.type.built-in.posix-reserved",
                "support.type.posix-reserved"
             ]
@@ -299,6 +300,7 @@
                "keyword.operator.quantifier.regexp",
                "keyword.other.js",
                "markup.bold.textbf.latex",
+               "markup.italic.textit.latex",
                "meta.jsx.children.js.jsx",
                "meta.object-literal.key.js.jsx",
                "meta.parameters.js",
