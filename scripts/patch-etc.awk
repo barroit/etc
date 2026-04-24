@@ -9,9 +9,9 @@
 # is undefined.
 
 BEGIN {
-	pretag = "^[ \t]*(#|\/\/) "
+	pretag = "^[ \t]*(#|//) "
 
-	"grep \.dev$ /etc/hosts | grep 127.0.0.1" | getline
+	"grep \\.dev$ /etc/hosts | grep 127.0.0.1" | getline
 
 	target = $2
 }
