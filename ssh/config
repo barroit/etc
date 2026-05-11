@@ -10,9 +10,9 @@ Host lvm.windows
 	HostName windows.lvm
 	IdentityFile %d/.ssh/lvm_windows
 
-Host lvm.noble
-	HostName noble.lvm
-	IdentityFile %d/.ssh/lvm_noble
+Host lvm.ubuntu
+	HostName ubuntu.lvm
+	IdentityFile %d/.ssh/lvm_ubuntu
 
 Host lvm.freebsd
 	HostName freebsd.lvm
