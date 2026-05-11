@@ -63,6 +63,7 @@
    },
    "editor.suggestOnTriggerCharacters": false,
    "editor.inlineSuggest.enabled": false,
+   "chat.disableAIFeatures": true,
 
 /* typing automation */
    "xml.completion.autoCloseTags": false,
@@ -124,7 +125,6 @@
    "C_Cpp.dimInactiveRegions": false,
 
 /* language specific */
-   "cmake.configureOnOpen": false,
    "xml.symbols.maxItemsComputed": -1,
    "js/ts.updateImportsOnFileMove.enabled": "never",
    "yaml.format.singleQuote": true,
@@ -241,6 +241,7 @@
                "keyword.other.using.directive",
                "storage.modifier",
                "storage.type.built-in.primitive",
+               "storage.type.primitive.array.java",
                "storage.type.primitive.java",
                "support.class.component.js.jsx",
                "support.function.be.latex",
@@ -359,10 +360,12 @@
                "support.function.eval.makefile",
                "support.function.filter.makefile",
                "support.function.filter-out.makefile",
+               "support.function.findstring.makefile",
                "support.function.firstword.makefile",
                "support.function.foreach.makefile",
                "support.function.general.latex",
                "support.function.gradient.css",
+               "support.function.if.makefile",
                "support.function.join.makefile",
                "support.function.js",
                "support.function.kernel.ruby",
@@ -429,5 +432,7 @@
             ]
          }
       ]
-   }
+   },
+   "chatgpt.followUpQueueMode": "queue",
+   "chatgpt.reviewDelivery": "detached"
 }
