@@ -3,24 +3,51 @@
 
 require 'uri'
 
-if ARGV.empty?
-   abort 'usage: iwara-dl.rb <url>'
+def parse_name(str)
+	url = URI(str)
+	param_map = URI.decode_www_form(url.query).to_h
+	time = Time.now.strftime('%y-%m-%d ')
+	name = param_map['download'].sub(/( \[[^\]]+\])+(?=.mp4$)/, '')
+				    .gsub('/', '／')
+
+	time + name
 end
 
-url_str = ARGV[0]
-url = URI(url_str)
+def download(name, str)
+	success = system('aria2c', '--split=16',
+			 '--max-connection-per-server=16', '--timeout=10',
+			 "--out=#{name}", str, out: File::NULL, err: File::NULL)
 
-query = url.query
-params = URI.decode_www_form(query)
-param_map = params.to_h
+	if !success
+		$stderr.puts "error: #{name}"
+		File.write('.err', "#{name}\n#{str}\n\n", mode: 'a')
+	end
+end
 
-now = Time.now
-time = now.strftime('%y-%m-%d ')
+queue = Queue.new
 
-name = param_map['download']
-name = name.sub(/( \[[^\]]+\])+(?=.mp4$)/, '')
-name = name.gsub('/', '／')
-name = time + name
+workers = Array.new(4) do
+	Thread.new do
+		loop do
+			task = queue.pop
 
-system('aria2c', '--split=16',
-       '--max-connection-per-server=16', "--out=#{name}", url_str)
+			if task.nil?
+				break
+			end
+
+			download(task[0], task[1])
+		end
+	end
+end
+
+$stdin.each_line do |line|
+	str = line.strip
+	name = parse_name(str)
+
+	puts name
+	queue.push([ name, str ])
+end
+
+queue.close
+
+workers.each(&:join)
