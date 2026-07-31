@@ -3,7 +3,8 @@
 /.gdbinit
 /.lldbinit
 
-/.tmp*
+/.tmp-*
+/.todo
 /.dev.vars
 
 /core.*
