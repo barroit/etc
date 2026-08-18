@@ -435,6 +435,5 @@
          }
       ]
    },
-   "chatgpt.followUpQueueMode": "queue",
-   "chatgpt.reviewDelivery": "detached"
+   "workbench.browser.showInTitleBar": false
 }
