@@ -1,0 +1,137 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+;====== machine: P1S
+;====== nozzle: 0.4
+;====== birth: 20230428
+;====== modify: 20260820
+
+M400
+
+G92 E0
+G1 E-0.8 F1800
+
+;====== home bed and toolhead
+{ if (max_layer_z + 0.5) < 256 }
+	G1 Z{max_layer_z + 0.5} F900
+{ endif }
+
+G1 X65 Y245 F12000
+G1 Y265 F3000
+M400 P400
+
+;====== finish timelapse recording
+M622.1 S1			; ?
+
+M1002 judge_flag timelapse_record_flag
+M622 J1
+  M991 S0 P-1			; end smooth timelapse at safe pos
+  M400 S3			; wait for last picture to be taken
+M623
+
+;====== clean nozzle
+M106 P1 S255
+M109 S{nozzle_temperature[current_extruder] - 39}
+M106 P1 S0
+
+G92 E0
+G1 E-0.5 F300
+
+G1 X76 F15000			; dislodge dangling filament
+G1 X65
+G1 X76
+G1 X65
+G1 X76
+G1 X65
+G1 X76
+G1 X65
+
+G1 X100 F5000			; clean with wiper and brush
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X60 F15000
+
+G1 X100 F15000			; clean with brush
+G1 X90 F5000
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X60 F30000
+
+M400 P200
+
+;====== turn off heaters
+M140 S0
+M104 S0
+
+M106 P1 S153
+M106 P2 S77
+
+;====== lower bed for part removal
+{ if (max_layer_z + 100.0) < 250 }
+  G1 Z{max_layer_z + 100.0} F600
+  G1 Z{max_layer_z + 98.0}
+{ else }
+  G1 Z250 F600
+  G1 Z248
+{ endif }
+
+;====== pull filament back into AMS
+G92 E0
+G1 E-0.2 F1800
+M400
+
+M620 S255
+  G1 X20 Y50 F12000
+  G1 Y-3
+
+  T255
+
+  G1 X65 F12000
+  G1 Y265
+  M400
+M621 S255
+
+;====== go idle
+M17 X0.8 Y0.8 Z0.5
+
+M106 P1 S0
+M106 P2 S0

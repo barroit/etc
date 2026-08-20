@@ -1,0 +1,251 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+;====== machine: P1S
+;====== nozzle: 0.4
+;====== birth: 20251031
+;====== modify: 20260820
+
+;====== set fan speed
+
+M106 P1 S0			; set part cooling fan to 0%
+M106 P2 S0			; set AUX fan to 39%
+M106 P3 S77			; set chamber fan to 30%
+M710 A1 S255			; set motherboard fan to 100%
+
+;====== init machine status
+M290 X40 Y40 Z2.6666666		; ?
+
+M975 S1				; enable vibration suppression
+
+M221 X0 Y0 Z0			; disable XYZ soft endstops
+
+G29.1 Z{+0.0}			; set Z trim
+
+M17 X1.2 Y1.2 Z0.75		; set motor current
+
+M204 S10000			; set acceleration limit to 10000 mm/s²
+
+M220 S100			; set feedrate
+M221 S100			; set flowrate
+
+M960 S5 P1			; turn on logo light
+M73.2 R1.0			; set remaining time multiplier
+M1002 set_gcode_claim_speed_level:5
+				; set displayed speed profile state
+
+;====== set bed and hotend temperature
+M104 S{nozzle_temperature_initial_layer[initial_extruder] - 20}
+				; set nozzle temperature
+M140 S{bed_temperature_initial_layer[initial_extruder]}
+				; set bed temperature
+
+;====== PLA: cool chamber to prevent heat creep
+{ if filament_type[initial_extruder] == "PLA" }
+  M106 P3 S180
+  M106 P2 S100
+{ endif }
+
+;====== lower bed for nozzle clearance
+G91				; set relative position mode
+  M17 S				; save current state
+  M17 Z0.4			; lower Z motor current
+    G380 S2 Z20 F300		; lower bed, with collision detection
+  M17 R
+G90				; set absolute position mode
+
+;====== move toolhead to poop chute
+G1 X128 F30000
+G1 Y128
+
+G1 X60
+G1 Y245
+G1 Y265 F3000
+
+M400				; wait for all queued moves to finish
+
+;====== AMS: load initial filament
+M620 M				; enable AMS filament remapping
+M620 S{initial_extruder}A	; execute following only if AMS is being used
+  M620.1 E F{
+	  flush_volumetric_speeds[initial_extruder] / 2.4053 * 60
+  } T{
+	  flush_temperatures[initial_extruder]
+  }				; set AMS flush feedrate and temperature
+
+  T{initial_extruder}		; start loading
+  M400
+M621 S{initial_extruder}
+
+M412 S1				; enable filament runout detection
+M109 S{flush_temperatures[initial_extruder]}
+
+M83				; set relative extrusion mode
+  G1 E50 F200			; extrude 50 mm of filament at 200 mm/min
+  M400
+
+  M104 S{nozzle_temperature_initial_layer[initial_extruder]}
+  M106 P1 S77
+
+  G1 E50 F200
+  M400
+
+  G1 E5 F300
+
+  M109 S{nozzle_temperature_initial_layer[initial_extruder] - 20}
+				; cool filament slightly to reduce oozing
+  M106 P1 S0
+
+  G1 E-0.5 F300			; retract filament
+M82
+
+;====== clean nozzle
+M106 P1 S255
+M109 S{nozzle_temperature_initial_layer[initial_extruder] - 39}
+M106 P1 S0
+
+G92 E0				; reset extruder position
+G1 E-0.5 F300
+
+G1 X76 F15000			; dislodge dangling filament
+G1 X65
+G1 X76
+G1 X65
+G1 X76
+G1 X65
+G1 X76
+G1 X65
+
+G1 X100 F5000			; clean with wiper and brush
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X70 F15000
+G1 X100 F5000
+G1 X60 F15000
+
+G1 X100 F15000			; clean with brush
+G1 X90 F5000
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X100
+G1 X90
+G1 X60 F30000
+
+M400
+
+;====== run bed leveling
+M190 S[bed_temperature_initial_layer_single]
+				; wait for bed temperature
+
+M1002 judge_flag g29_before_print_flag
+M622 J1				; if g29_before_print_flag
+  M1002 gcode_claim_action:1
+
+  G29 A X{
+	  first_layer_print_min[0]
+  } Y{
+	  first_layer_print_min[1]
+  } I{
+	  first_layer_print_size[0]
+  } J{
+	  first_layer_print_size[1]
+  }			; probe the first layer print area
+  M400
+  M500			; save calibration data
+M623				; endif
+
+M1002 judge_flag g29_before_print_flag
+M622 J0				; if !g29_before_print_flag
+  M1002 gcode_claim_action:13
+
+  G28
+  M400
+M623
+
+M975 S1
+
+;====== check mechanical resonance
+G1 X128 F30000
+G1 Y128
+G1 Z10 F1200
+M400 P200			; after waiting, pause for 200 ms
+
+M970.3 Q1 A7 B30 C80 H15 K0	; run fast mechanical vibration sweep on X axis
+M974 Q1 S2 P0			; process X axis accelerometer data and apply
+				; compensation
+
+M975 S1
+
+G1 X128 Y128 F30000
+G1 Z10 F1200
+M400 P200
+
+M970.3 Q0 A7 B30 C90 H15 K0
+M974 Q0 S2 P0
+
+M975 S1
+
+;====== heat nozzle to target temperature
+G1 X60 Y245 F30000
+G1 Y265 F3000
+
+M109 S{nozzle_temperature_initial_layer[initial_extruder]}
+
+;====== Textured PEI Plate: compensate Z offset
+{ if curr_bed_type == "Textured PEI Plate" }
+  G29.1 Z{-0.04}
+{ endif }
+
+;====== move to start postion
+G1 X90 F5000
+G1 X70 F15000
+G1 X90 F5000
+G1 X70 F15000
+G1 X90 F15000
+M400
+
+T1000				; switch to nozzle space
+
+;====== start printing
+M1002 gcode_claim_action:0
+
+M106 P1 S0
+M106 P2 S0
+M106 P3 S77
+
+M975 S1
