@@ -133,5 +133,10 @@ M104 S0
 ;====== go idle
 M17 X0.8 Y0.8 Z0.5
 
+M201.2 K1.0			; reset acceleration multiplier
+M73.2 R1.0			; reset remaining time multiplier
+
+M1002 set_gcode_claim_speed_level:0
+
 M106 P1 S0
 M106 P2 S0
