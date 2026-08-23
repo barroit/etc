@@ -8,7 +8,7 @@
 ;====== set fan speed
 
 M106 P1 S0			; set part cooling fan to 0%
-M106 P2 S0			; set AUX fan to 39%
+M106 P2 S0			; set AUX fan to 0%
 M106 P3 S77			; set chamber fan to 30%
 M710 A1 S255			; set motherboard fan to 100%
 
@@ -83,28 +83,17 @@ M83				; set relative extrusion mode
   G1 E50 F200			; extrude 50 mm of filament at 200 mm/min
   M400
 
-  M104 S{nozzle_temperature_initial_layer[initial_extruder]}
+  M104 S{nozzle_temperature_initial_layer[initial_extruder] - 39}
   M106 P1 S77
 
   G1 E50 F200
-  M400
-
-  G1 E5 F300
-
-  M109 S{nozzle_temperature_initial_layer[initial_extruder] - 20}
-				; cool filament slightly to reduce oozing
-  M106 P1 S0
-
-  G1 E-0.5 F300			; retract filament
 M82
 
 ;====== clean nozzle
 M106 P1 S255
 M109 S{nozzle_temperature_initial_layer[initial_extruder] - 39}
 M106 P1 S0
-
-G92 E0				; reset extruder position
-G1 E-0.5 F300
+M104 S140
 
 G1 X76 F15000			; dislodge dangling filament
 G1 X65
@@ -169,6 +158,17 @@ G1 X60 F30000
 M400
 
 ;====== run bed leveling
+M106 P1 S255
+M109 S140
+M106 P1 S0
+
+G92 E0
+G1 E-0.8 F300
+
+M400
+
+G1 X128 F30000
+
 M190 S[bed_temperature_initial_layer_single]
 				; wait for bed temperature
 
@@ -228,7 +228,7 @@ M109 S{nozzle_temperature_initial_layer[initial_extruder]}
 
 ;====== Textured PEI Plate: compensate Z offset
 { if curr_bed_type == "Textured PEI Plate" }
-  G29.1 Z{-0.04}
+  G29.1 Z-0.04
 { endif }
 
 ;====== print prime line
