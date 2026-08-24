@@ -53,13 +53,9 @@ G91				; set relative position mode
   M17 R
 G90				; set absolute position mode
 
-;====== move toolhead to poop chute
+;====== move toolhead to center
 G1 X128 F30000
 G1 Y128
-
-G1 X60
-G1 Y245
-G1 Y265 F3000
 
 M400				; wait for all queued moves to finish
 
@@ -165,9 +161,12 @@ M106 P1 S0
 G92 E0
 G1 E-0.8 F300
 
-M400
-
 G1 X128 F30000
+
+G92 E0
+G1 E-0.2 F300
+
+M400
 
 M190 S[bed_temperature_initial_layer_single]
 				; wait for bed temperature
@@ -237,6 +236,10 @@ G1 X70 F15000
 G1 X90 F5000
 G1 X70 F15000
 G1 X90 F15000
+
+G1 X128 F30000
+G1 Y128
+
 M400
 
 T1000				; switch to nozzle space
