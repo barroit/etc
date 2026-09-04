@@ -53,11 +53,15 @@ G91				; set relative position mode
   M17 R
 G90				; set absolute position mode
 
+M400				; wait for all queued moves to finish
+
 ;====== move toolhead to center
+G28 X				; home toolhead based on X axis
+
 G1 X128 F30000
 G1 Y128
 
-M400				; wait for all queued moves to finish
+M400
 
 ;====== AMS: load initial filament
 M620 M				; enable AMS filament remapping
