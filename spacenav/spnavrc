@@ -1,0 +1,64 @@
+# This config is for the modified spacenavd.
+#
+# $ diff a/src/cfgfile.h b/src/cfgfile.h
+# 25c25
+# < #define MAX_BUTTONS           64
+# ---
+# > #define MAX_BUTTONS           256
+
+sensitivity = 0.400
+dead-zone0 = 80
+dead-zone1 = 80
+dead-zone2 = 80
+dead-zone3 = 80
+dead-zone4 = 80
+dead-zone5 = 80
+invert-trans = xyz
+invert-rot = xyz
+
+# https://github.com/blender/blender/blob/v5.2.1/intern/ghost/GHOST_Types.hh#1304
+# https://github.com/FreeSpacenav/spacenavd/blob/v1.3.1/src/dev.c#L469
+bnmap0  = 13	# GHOST_NDOF_BUTTON_1
+bnmap1  = 14	# GHOST_NDOF_BUTTON_2
+bnmap2  = 15	# GHOST_NDOF_BUTTON_3
+bnmap3  = 16	# GHOST_NDOF_BUTTON_4
+bnmap4  = 17	# GHOST_NDOF_BUTTON_5
+bnmap5  = 18	# GHOST_NDOF_BUTTON_6
+bnmap6  = 19	# GHOST_NDOF_BUTTON_7
+bnmap7  = 20	# GHOST_NDOF_BUTTON_8
+bnmap8  = 21	# GHOST_NDOF_BUTTON_9
+bnmap9  = 22	# GHOST_NDOF_BUTTON_10
+bnmap10 = 77	# GHOST_NDOF_BUTTON_11
+bnmap11 = 78	# GHOST_NDOF_BUTTON_12
+
+bnmap12 = 1	# GHOST_NDOF_BUTTON_MENU
+bnmap13 = 2	# GHOST_NDOF_BUTTON_FIT
+
+bnmap14 = 3	# GHOST_NDOF_BUTTON_TOP
+bnhold14 = 7	# GHOST_NDOF_BUTTON_BOTTOM
+bnmap15 = 5	# GHOST_NDOF_BUTTON_RIGHT
+bnhold15 = 4	# GHOST_NDOF_BUTTON_LEFT
+bnmap16 = 6	# GHOST_NDOF_BUTTON_FRONT
+bnhold16 = 8	# GHOST_NDOF_BUTTON_BACK
+bnmap17 = 9	# GHOST_NDOF_BUTTON_ROLL_CW
+bnhold17 = 10	# GHOST_NDOF_BUTTON_ROLL_CCW
+
+bnmap18 = 23	# GHOST_NDOF_BUTTON_ESC
+bnmap19 = 24	# GHOST_NDOF_BUTTON_ALT
+bnmap20 = 25	# GHOST_NDOF_BUTTON_SHIFT
+bnmap21 = 26	# GHOST_NDOF_BUTTON_CTRL
+bnmap22 = 27	# GHOST_NDOF_BUTTON_ROTATE
+bnmap23 = 36	# GHOST_NDOF_BUTTON_ENTER
+bnmap24 = 37	# GHOST_NDOF_BUTTON_DELETE
+bnmap25 = 175	# GHOST_NDOF_BUTTON_TAB
+bnmap26 = 176	# GHOST_NDOF_BUTTON_SPACE
+
+bnmap27 = 103	# GHOST_NDOF_BUTTON_V1
+bnhold27 = 139	# GHOST_NDOF_BUTTON_SAVE_V1
+bnmap28 = 104	# GHOST_NDOF_BUTTON_V2
+bnhold28 = 140	# GHOST_NDOF_BUTTON_SAVE_V2
+bnmap29 = 105	# GHOST_NDOF_BUTTON_V3
+bnhold29 = 141	# GHOST_NDOF_BUTTON_SAVE_V3
+
+bnmap30 = 11	# GHOST_NDOF_BUTTON_ISO1
+bnhold30 = 12	# GHOST_NDOF_BUTTON_ISO2
