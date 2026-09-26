@@ -1,0 +1,4 @@
+clear_all_shortcuts yes
+
+map ctrl+insert  copy_to_clipboard
+map shift+insert paste_from_clipboard
