@@ -1,0 +1,12 @@
+clear_all_shortcuts yes
+
+# <dev-ubuntu>
+# map ctrl+insert  copy_to_clipboard
+# map shift+insert paste_from_clipboard
+# </dev-ubuntu>
+# <dev-macos>
+# map cmd+c copy_to_clipboard
+# map cmd+v paste_from_clipboard
+# </dev-macos>
+
+mouse_map left click ungrabbed mouse_handle_click selection prompt
