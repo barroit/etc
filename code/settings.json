@@ -147,7 +147,8 @@
       "editor.indentSize": 2
    },
    "[markdown]": {
-      "editor.wordWrap": "off"
+      "editor.fontFamily": "SOROEMONO",
+      "editor.wordWrap": "off",
    },
    "[yaml]": {
       "editor.tabSize": 3
@@ -210,6 +211,7 @@
                "foreground": "#ce9178"
             },
             "scope": [
+               "constant.character.format.placeholder.other.python",
                "constant.other.placeholder"
             ]
          },
@@ -304,8 +306,12 @@
                "keyword.other.js",
                "markup.bold.textbf.latex",
                "markup.italic.textit.latex",
+               "meta.embedded.block.frontmatter",
+               "meta.embedded.math.markdown",
+               "meta.function.math.tex",
                "meta.jsx.children.js.jsx",
                "meta.object-literal.key.js.jsx",
+               "meta.paragraph.markdown",
                "meta.parameters.js",
                "meta.preprocessor.macro",
                "meta.property-list.css",
