@@ -14,7 +14,7 @@
    // "window.zoomLevel": 4,
    // </dev-ubuntu>
    // <dev-macos>
-   // "window.zoomLevel": 1,
+   // "window.zoomLevel": 2,
    // </dev-macos>
 
 /* workbench */
@@ -113,7 +113,12 @@
 
 /* typography */
    "editor.fontFamily": "'JetBrains Mono NL'",
-   "editor.fontSize": 19,
+   // <dev-ubuntu>
+   // "editor.fontSize": 19,
+   // </dev-ubuntu>
+   // <dev-macos>
+   // "editor.fontSize": 15,
+   // </dev-macos>
 
 /* highlighting */
    "editor.occurrencesHighlight": "off",
@@ -299,6 +304,7 @@
                "keyword.codetag.notation.python",
                "keyword.control.anchor.regexp",
                "keyword.control.directive",
+               "keyword.control.ternary.java",
                "keyword.operator",
                "keyword.operator.negation.regexp",
                "keyword.operator.or.regexp",
@@ -336,6 +342,7 @@
                "punctuation.separator.key-value.js",
                "punctuation.separator.key-value.ts",
                "punctuation.separator.key-value.tsx",
+               "punctuation.separator.map.value.yaml",
                "punctuation.terminator.expression.php",
                "punctuation.terminator.rule.css",
                "punctuation.terminator.statement.js",
@@ -350,6 +357,7 @@
                "storage.type.function.arrow.ts",
                "storage.type.generic.java",
                "storage.type.java",
+               "storage.type.object.array.java",
                "string.regexp",
                "string.unquoted.cmake",
                "support.class",
@@ -446,5 +454,6 @@
          }
       ]
    },
-   "workbench.browser.showInTitleBar": false
+   "workbench.browser.showInTitleBar": false,
+   "editor.unicodeHighlight.nonBasicASCII": false
 }
