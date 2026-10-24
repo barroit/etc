@@ -1,3 +1,5 @@
+packadd osc52
+
 call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
@@ -15,6 +17,7 @@ set shiftwidth=8
 set cindent
 set backspace=indent,eol,start
 set ruler
+set clipmethod+=osc52
+set clipboard=unnamedplus
 
 colorscheme barroit
-
