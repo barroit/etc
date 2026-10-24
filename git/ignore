@@ -3,9 +3,10 @@
 /.gdbinit
 /.lldbinit
 
+/.dev.vars
+/.tmp
 /.tmp-*
 /.todo
-/.dev.vars
 
 /core.*
 /vgcore.*
@@ -15,7 +16,6 @@
 /.*.swp
 
 /.config
-/.config.unix*
-/.config.win32*
+/.config.old
 
 /node_modules
