@@ -49,3 +49,8 @@ Host gitlab.com
 	User git
 	IdentityFile %d/.ssh/com_github.pub
 
+Host google.colab
+	User root
+	IdentityFile %d/.ssh/google_colab.pub
+	UserKnownHostsFile /dev/null
+	StrictHostKeyChecking accept-new
