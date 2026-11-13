@@ -8,7 +8,6 @@
 
 /* window */
    "window.restoreWindows": "none",
-   "window.menuBarVisibility": "hidden",
    "window.commandCenter": false,
    // <dev-ubuntu>
    // "window.zoomLevel": 4,
@@ -74,6 +73,7 @@
 /* code validation */
    "xml.validation.enabled": false,
    "js/ts.validate.enabled": false,
+   "C_Cpp.errorSquiggles": "disabled",
 
 /* extensions */
    "extensions.ignoreRecommendations": true,
@@ -207,7 +207,8 @@
             "scope": [
                "entity.name.section.markdown",
                "markup.bold.textbf.latex",
-               "markup.heading"
+               "markup.heading",
+               "markup.italic.doxygen.c",
             ]
          },
       /* colors */
@@ -311,6 +312,7 @@
                "keyword.operator.quantifier.regexp",
                "keyword.other.js",
                "markup.bold.textbf.latex",
+               "markup.italic.doxygen.c",
                "markup.italic.textit.latex",
                "meta.embedded.block.frontmatter",
                "meta.embedded.math.markdown",
