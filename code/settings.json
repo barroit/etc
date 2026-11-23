@@ -223,15 +223,6 @@
          },
          {
             "settings": {
-               "foreground": "#c6c699"
-            },
-            "scope": [
-               "entity.name.function",
-               "support.function.builtin"
-            ]
-         },
-         {
-            "settings": {
                "foreground": "#569cd6"
             },
             "scope": [
@@ -380,6 +371,7 @@
                "support.function.dir.makefile",
                "support.function.error.makefile",
                "support.function.eval.makefile",
+               "support.function.file.makefile",
                "support.function.filter.makefile",
                "support.function.filter-out.makefile",
                "support.function.findstring.makefile",
@@ -435,6 +427,7 @@
                "variable.language.makefile",
                "variable.language.special.cls.python",
                "variable.language.special.self.python",
+               "variable.language.wildcard.java",
                "variable.legacy.builtin.python",
                "variable.other.constant",
                "variable.other.enummember",
