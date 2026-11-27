@@ -355,6 +355,7 @@
                "string.unquoted.cmake",
                "support.class",
                "support.constant.property-value.css",
+               "support.function.abspath.makefile",
                "support.function.addprefix.makefile",
                "support.function.addsuffix.makefile",
                "support.function.and.makefile",
@@ -380,6 +381,7 @@
                "support.function.general.latex",
                "support.function.gradient.css",
                "support.function.if.makefile",
+               "support.function.info.makefile",
                "support.function.join.makefile",
                "support.function.js",
                "support.function.kernel.ruby",
@@ -404,6 +406,7 @@
                "support.function.tsx",
                "support.function.url.css",
                "support.function.wildcard.makefile",
+               "support.function.word.makefile",
                "support.function.wordlist.makefile",
                "support.type",
                "support.type.object.module.js",
@@ -450,5 +453,6 @@
       ]
    },
    "workbench.browser.showInTitleBar": false,
-   "editor.unicodeHighlight.nonBasicASCII": false
+   "editor.unicodeHighlight.nonBasicASCII": false,
+   "window.menuBarVisibility": "compact"
 }
