@@ -1,10 +1,11 @@
-model = "gpt-6-astra"
+model = "gpt-6.2-astra"
 model_reasoning_effort = "high"
 
 personality = "pragmatic"
 
 web_search = "live"
 approvals_reviewer = "auto_review"
+service_tier = "default"
 
 [tui]
 notifications = false
