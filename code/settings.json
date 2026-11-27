@@ -24,7 +24,7 @@
    "workbench.startupEditor": "none",
    "workbench.editor.empty.hint": "hidden",
    "workbench.editorAssociations": {
-      "*.svg": "default"
+      "*.svg": "default",
    },
    "problems.visibility": false,
 
@@ -38,7 +38,7 @@
       "**/node_modules": true,
       "**/LICENSES": true,
       "**/pnpm-lock.yaml": true,
-      "**/.github": true
+      "**/.github": true,
    },
 
 /* editor */
@@ -58,7 +58,7 @@
 /* intelligence */
    "editor.codeLens": false,
    "editor.quickSuggestions": {
-      "other": "off"
+      "other": "off",
    },
    "editor.suggestOnTriggerCharacters": false,
    "editor.inlineSuggest.enabled": false,
@@ -108,7 +108,7 @@
       "*.h.in": "c",
       "*.hpp.in": "cpp",
       "settings.json": "jsonc",
-      "_headers": "plaintext"
+      "_headers": "plaintext",
    },
 
 /* typography */
@@ -137,47 +137,47 @@
 /* language override */
    "[cmake]": {
       "editor.insertSpaces": true,
-      "editor.indentSize": 2
+      "editor.indentSize": 2,
    },
    "[jsonc]": {
       "editor.insertSpaces": true,
-      "editor.tabSize": 3
+      "editor.tabSize": 3,
    },
    "[json]": {
       "editor.insertSpaces": true,
-      "editor.tabSize": 3
+      "editor.tabSize": 3,
    },
    "[xml]": {
       "editor.insertSpaces": true,
-      "editor.indentSize": 2
+      "editor.indentSize": 2,
    },
    "[markdown]": {
       "editor.fontFamily": "SOROEMONO",
       "editor.wordWrap": "off",
    },
    "[yaml]": {
-      "editor.tabSize": 3
+      "editor.tabSize": 3,
    },
    "[html]": {
       "editor.insertSpaces": true,
       "editor.tabSize": 8,
-      "editor.indentSize": 2
+      "editor.indentSize": 2,
    },
    "[rst-ja]": {
-      "editor.fontFamily": "SOROEMONO"
+      "editor.fontFamily": "SOROEMONO",
    },
    "[latex]": {
       "editor.insertSpaces": true,
-      "editor.tabSize": 3
+      "editor.tabSize": 3,
    },
    "[latex-ja]": {
       "editor.insertSpaces": true,
       "editor.tabSize": 3,
-      "editor.fontFamily": "SOROEMONO"
+      "editor.fontFamily": "SOROEMONO",
    },
    "[ruby]": {
       "editor.insertSpaces": true,
-      "editor.tabSize": 3
+      "editor.tabSize": 3,
    },
 
 /* theme */
@@ -202,28 +202,28 @@
       /* styles */
          {
             "settings": {
-               "fontStyle": ""
+               "fontStyle": "",
             },
             "scope": [
                "entity.name.section.markdown",
                "markup.bold.textbf.latex",
                "markup.heading",
                "markup.italic.doxygen.c",
-            ]
+            ],
          },
       /* colors */
          {
             "settings": {
-               "foreground": "#ce9178"
+               "foreground": "#ce9178",
             },
             "scope": [
                "constant.character.format.placeholder.other.python",
-               "constant.other.placeholder"
-            ]
+               "constant.other.placeholder",
+            ],
          },
          {
             "settings": {
-               "foreground": "#569cd6"
+               "foreground": "#569cd6",
             },
             "scope": [
                "constant.other.general.math.tex",
@@ -250,12 +250,12 @@
                "support.function.textbf.latex",
                "support.function.textit.latex",
                "support.type.built-in.posix-reserved",
-               "support.type.posix-reserved"
-            ]
+               "support.type.posix-reserved",
+            ],
          },
          {
             "settings": {
-               "foreground": "#a8a8a8"
+               "foreground": "#a8a8a8",
             },
             "scope": [
                "comment",
@@ -438,21 +438,21 @@
                "variable.parameter.keyframe-list.css",
                "variable.parameter.misc.css",
                "variable.parameter.url.css",
-            ]
+            ],
          },
          {
             "settings": {
-               "foreground": "#acc4a0"
+               "foreground": "#acc4a0",
             },
             "scope": [
                "constant.numeric.decimal",
                "constant.numeric.integer",
-               "storage.type.number.python"
-            ]
-         }
-      ]
+               "storage.type.number.python",
+            ],
+         },
+      ],
    },
    "workbench.browser.showInTitleBar": false,
    "editor.unicodeHighlight.nonBasicASCII": false,
-   "window.menuBarVisibility": "compact"
+   "window.menuBarVisibility": "compact",
 }
